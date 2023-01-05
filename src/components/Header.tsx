@@ -4,7 +4,7 @@ function Header() {
   return (
     <StyledHeader>
         <div>
-            <img src="./src/assets/logo.svg" alt="" />
+            <img src="./src/assets/logo.svg" alt="logo" />
         </div>
     </StyledHeader>
   )
