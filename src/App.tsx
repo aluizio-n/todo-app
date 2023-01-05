@@ -5,6 +5,7 @@ import Tasks from './components/Tasks';
 import styled from 'styled-components'
 import './global.css';
 
+
 function App() {
   
 
@@ -12,7 +13,7 @@ function App() {
     <StyledApp>
       <div className='App'>
           <Header/>
-          <NewTask/>
+          <NewTask />
           <Tasks/>
       </div>
     </StyledApp>
