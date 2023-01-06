@@ -3,19 +3,22 @@ import styled from 'styled-components'
 import { PlusCircle } from "phosphor-react";
 
 
-
-function NewTask() {
+export function NewTask() {
 
 function handleCreateTask(){
-    var input = document.querySelector('.addTask');
-    var task = input.value;
-    console.log(task)
+    console.log()
 }
+
 
 return (
     <StyledNewTask>
         <div className='taskBar'>
-           <input  className='addTask' type="text" placeholder='Adicione uma nova tarefa...' />
+           <input className='addTask' 
+                  type="text" 
+                  placeholder='Adicione uma nova tarefa...'
+                  name='task'
+                  
+            />
 
            <button onClick={handleCreateTask}>
                Criar<PlusCircle size={20} />

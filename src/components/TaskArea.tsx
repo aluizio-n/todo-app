@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Trash } from "phosphor-react";
+import TaskCard from './TaskCard';
 
-function Tasks() {
+function TaskArea() {
   return (
     <StyledTasks>
       <div className='container'>
@@ -12,11 +14,20 @@ function Tasks() {
         </div>
 
         <div className='tasks'>
-          <div className='taskList'>
-            <img src="./src/assets/Clipboard.svg" alt="" />
+          <div className='withoutTask'>
+
+            {/* <img src="./src/assets/Clipboard.svg" alt="" />
             <p className='a'>Você ainda não tem tarefas cadastradas</p>
-            <p className='b'>Crie e organize seus itens a fazer</p>
-            
+            <p className='b'>Crie e organize seus itens a fazer</p>  */}
+          </div>
+
+          <div className="withTasks">
+
+            <TaskCard />
+            <TaskCard />
+            <TaskCard />
+            <TaskCard />
+
           </div>
         </div>
       </div>
@@ -24,7 +35,7 @@ function Tasks() {
   )
 }
 
-export default Tasks
+export default TaskArea
 
 const StyledTasks = styled.div`
 display: flex;
@@ -34,7 +45,7 @@ align-items: center;
 
 .container{
   width: 736px;
-  height: 287px;
+  margin-bottom: 12px;
  
 }
 
@@ -65,17 +76,18 @@ align-items: center;
 
 .tasks{
   width: 736px;
-  border-top: 1px solid #333333;
+  /* border-top: 1px solid #333333; */
   border-radius: 10px;
   margin-top: 24px;
 }
 
-.taskList{
+.withoutTask{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-top: 50px;
+  color: #808080;
   
 }
 
@@ -100,6 +112,23 @@ span{
   margin-left: 10px;
   font-weight: bold;
   font-size: 12px;
+}
+
+
+
+.taskCard{
+  width: 736px;
+  height: 72px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #262626;
+  border-radius: 8px;
+  font-size: 14px;
+  color: white;
+  box-shadow: 0 2 8 0;
+
 }
 
 `
