@@ -1,22 +1,10 @@
-import styled from 'styled-components';
+import styles from './Header.module.css'
+import Logo from './../assets/logo.svg'
 
-function Header() {
-  return (
-    <StyledHeader>
-        <div>
-            <img src="./src/assets/logo.svg" alt="logo" />
-        </div>
-    </StyledHeader>
-  )
+export function Header() {
+    return (
+        <header className={styles.head}>
+            <img src={Logo} alt="ToDo Logo" />
+        </header>
+    )
 }
-
-export default Header
-
-const StyledHeader = styled.div `
-display: flex;
-justify-content: center;
-align-items: center;
-width: 100%;
-height: 200px;
-background-color: #0D0D0D;
-`
